@@ -1,33 +1,66 @@
+numero = float(input("Digite um número: "))
 
-print("E-commerce X") 
-produtos = ['','1 - HD',
-            '2 - monitor',
-            '3 - teclado',
-            '4 - iphone']
-valores = [0,500.0,5000.0,250.0,14000.0]
-print(f'''
-{produtos[1]} R$ {valores[1]}
-{produtos[2]} R$ {valores[2]}
-{produtos[3]} R$ {valores[3]}
-''')
+if numero > 0:
+    print("O número é positivo.")
+elif numero < 0:
+    print("O número é negativo.")
+else:
+    print("O número é zero.")
+    
 
-carrinho = []
-total = []
+idade = int(input("Digite a sua idade: "))
 
+if idade < 16:
+    print("Você ainda não pode votar.")
+elif 18 <= idade <= 70:
+    print("O voto é obrigatório.")
+else:
+    print("O voto é opcional")
 
-produto_1 = int(input('produto:'))
-produto_2 = int(input('produto:'))
-produto_3 = int(input('produto:'))
-
-
-
-carrinho.extend([produto_1,produto_2,produto_3])
-total.extend([valores[produto_1], valores[produto_2],valores[produto_3]])
-print('***' * 20) 
-print('R$', sum(total))
-print('produtos:', carrinho) 
-print('obrigado volte sempre')
+numero = 15
 
 
+if numero % 2 == 0:
+    print(f"O número {numero} é par.")
+else:
+    print(f"O número {numero} é ímpar.")
 
-            
+
+lado1 = float(input("Digite o primeiro lado: "))
+lado2 = float(input("Digite o segundo lado: "))
+lado3 = float(input("Digite o terceiro lado: "))
+
+
+if lado1 + lado2 > lado3 and lado1 + lado3 > lado2 and lado2 + lado3 > lado1:
+
+    if lado1 == lado2 == lado3:
+        print("O triângulo é Equilátero.")
+    elif lado1 == lado2 or lado1 == lado3 or lado2 == lado3:
+        print("O triângulo é Isósceles.")
+    else:
+        print("O triângulo é Escaleno.")
+
+
+def verificar_multiplo_v1(numero):
+    if numero % 5 == 0 and numero % 7 == 0:
+        return f"O número {numero} é múltiplo de 5 e 7."
+    else:
+        return f"O número {numero} NÃO é múltiplo de 5 e 7."
+   
+   
+   
+numero = 15
+
+if numero > 0 and numero > 10:
+    print("O número é positivo e maior que 10.")
+else:
+    print("O número não atende aos requisitos.")
+
+
+numero = int(input("Digite um número: "))
+
+if numero % 3 == 0 or numero % 5 == 0:
+    print(f"O número {numero} é divisível por 3 ou por 5.")
+else:
+    print(f"O número {numero} NÃO é divisível por 3 nem por 5.")
+    
