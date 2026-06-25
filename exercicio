@@ -1,0 +1,37 @@
+try:
+    entrada = input("Digite um número inteiro: ")
+    numero = int(entrada)
+    print(f"Você digitou o número inteiro: {numero}")
+except ValueError:
+    print("Erro: O valor inserido não é um número inteiro válido.")
+    
+
+try:
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
+    
+    resultado = num1 / num2
+    print(f"O resultado da divisão é: {resultado}")
+
+except ZeroDivisionError:
+    print("Erro: Não é possível realizar uma divisão por zero.")
+except ValueError:
+    print("Erro: Por favor, digite apenas números válidos.")
+
+
+def obter_item_por_indice(lista, indice):
+    try:
+        # Tenta retornar o valor no índice fornecido
+        return lista[indice]
+    except IndexError:
+        # Manipula a exceção se o índice for inválido
+        return f"Erro: O índice '{indice}' não existe nesta lista."
+
+# Exemplo de uso:
+minha_lista = ['maçã', 'banana', 'laranja', 'uva']
+
+# Acesso válido
+print(obter_item_por_indice(minha_lista, 2))  # Saída: laranja
+
+# Acesso inválido (índice maior que o tamanho da lista)
+print(obter_item_por_indice(minha_lista, 10)) 
